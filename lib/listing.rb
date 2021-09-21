@@ -2,7 +2,12 @@ require 'pg'
 
 class Listing
   def self.all
-    connection = PG.connect(dbname: 'sunrisebnb')
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'sunrisebnb_test')
+    else    
+      connection = PG.connect(dbname: 'sunrisebnb')
+    end
+
     result = connection.exec("SELECT * FROM listings;")
     result.map { |listing| listing['listing_name'] }
   end 

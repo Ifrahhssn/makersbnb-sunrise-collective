@@ -110,3 +110,9 @@ Methods :
 CREATE DATABASE "sunrisebnb";
 
 CREATE TABLE listings(id SERIAL PRIMARY KEY, listing_name VARCHAR(280));
+
+### Instructions on creating test database
+
+CREATE DATABASE "sunrisebnb_test";
+
+CREATE TABLE listings(id SERIAL PRIMARY KEY, listing_name VARCHAR(280));
