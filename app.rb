@@ -7,7 +7,7 @@ class Sunrisebnb < Sinatra::Base
   end
 
   get '/' do
-    'Sunrise Bookings!'
+    erb :index
   end
 
   run! if app_file == $0
