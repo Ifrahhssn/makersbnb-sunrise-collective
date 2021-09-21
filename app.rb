@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require './lib/listing'
 
 class Sunrisebnb < Sinatra::Base
   configure :development do
@@ -10,7 +11,8 @@ class Sunrisebnb < Sinatra::Base
     erb :index
   end
 
-  get '/listings' do 
+  get '/listings' do
+    @listing = Listing.all
     erb :listings
   end 
 
