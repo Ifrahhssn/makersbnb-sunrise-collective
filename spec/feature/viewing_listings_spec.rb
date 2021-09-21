@@ -1,11 +1,11 @@
+require 'pg'
+
 feature 'Shows listings' do 
   it 'shows all the listings on a page' do 
-    connection = PG.connect(dbname: 'sunrisebnb_test')
-    connection.exec("INSERT INTO listings (listing_name) VALUES ('Listing number 1');")
-    connection.exec("INSERT INTO listings (listing_name) VALUES ('Listing number 2');")
-    connection.exec("INSERT INTO listings (listing_name) VALUES ('Listing number 3');")
+    Listing.create(listing_name: "Listing number 1")
 
     visit('/listings')
-    expect(page).to have_content "Listings"
+    expect(page).to have_content "Listing number 1"
+
   end 
 end
