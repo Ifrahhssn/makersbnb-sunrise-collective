@@ -10,5 +10,9 @@ class Sunrisebnb < Sinatra::Base
     erb :index
   end
 
+  get '/listings' do 
+    erb :listings
+  end 
+
   run! if app_file == $0
 end
