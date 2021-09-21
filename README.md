@@ -104,3 +104,9 @@ Methods :
 
 
 <img width="644" alt="Screenshot 2021-09-20 at 16 19 33" src="https://user-images.githubusercontent.com/54316167/134090326-77c8a0e8-3b82-4144-9a06-effb5f28f911.png">
+
+### Intructions on creating database
+
+CREATE DATABASE "sunrisebnb";
+
+CREATE TABLE listings(id SERIAL PRIMARY KEY, listing_name VARCHAR(280));
