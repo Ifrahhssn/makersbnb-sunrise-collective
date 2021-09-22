@@ -12,12 +12,12 @@ class Listing
     result.map { |listing| listing['listing_name'] }
   end 
   
-  def self.create(listing_name:)
+  def self.create(listing_name:, description:, price:)
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'sunrise_bnb_manager_test')
     else    
       connection = PG.connect(dbname: 'sunrise_bnb_manager')
     end
-    connection.exec("INSERT INTO listings (listing_name) VALUES('#{listing_name}')")
+    connection.exec("INSERT INTO listings (listing_name, description, price) VALUES('#{listing_name}', '#{description}', '#{price}')")
   end
 end

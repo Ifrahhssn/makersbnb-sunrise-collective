@@ -15,8 +15,10 @@ describe Listing do
 
   describe '.create' do
     it 'creates a new listing' do
-      Listing.create(listing_name: 'Example listing 1')
+      Listing.create(listing_name: 'Example listing 1', description: 'Example description', price: '60')
       expect(Listing.all).to include 'Example listing 1'
+      expect(Listing.all).to include 'Example description'
+      expect(Listing.all).to include '60'
     end
   end
 end
