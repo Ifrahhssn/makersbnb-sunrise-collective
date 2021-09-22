@@ -1,7 +1,15 @@
 require 'pg'
 
 def setup_test_database
-  connection = PG.connect(dbname: 'sunrisebnb_test')
 
-  connection.exec("TRUNCATE listings;")
+p "Setting up test database..."
+
+connection = PG.connect(dbname: 'sunrise_bnb_manager_test')
+
+# Clear the tables
+
+connection.exec("TRUNCATE accounts;")
+  
+connection.exec("TRUNCATE listings;")  
+
 end
