@@ -14,4 +14,6 @@ describe User do
       expect(first_user.email).to eq "test1@example.com"
     end
   end
+
+
 end

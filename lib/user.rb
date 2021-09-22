@@ -31,4 +31,7 @@ class User
     result = connection.exec("SELECT * FROM accounts")
     result.map { |input| input["email"] }
   end
+
+
+
 end
