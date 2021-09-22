@@ -1,4 +1,4 @@
-CREATE DATABASE sunrise_bnb_manager
+CREATE DATABASE sunrise_bnb_manager;
 
 CREATE TABLE accounts (
 	user_id serial PRIMARY KEY,
