@@ -11,7 +11,7 @@ CREATE TABLE accounts (
 
 >> Duplicate for sunrise_bnb_manager_test <<
 
-CREATE DATABASE sunrise_bnb_manager_test
+CREATE DATABASE sunrise_bnb_manager_test;
 
 CREATE TABLE accounts (
 	user_id serial PRIMARY KEY,
