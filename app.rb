@@ -1,6 +1,7 @@
 require "sinatra/base"
 require "sinatra/reloader"
 require "./lib/user"
+require "./lib/listing"
 
 class Sunrisebnb < Sinatra::Base
   configure :development do
@@ -8,28 +9,41 @@ class Sunrisebnb < Sinatra::Base
   end
 
   enable :sessions
-
-
-  get "/" do
-    "Sunrise Bookings!"
+  
+  get '/' do
+    erb :index
   end
 
-  get "/users/new" do
+  get '/users/new' do
     erb :users
-
   end
 
-  post "/users" do
+  post '/users' do
     session[:username] = params[:username]
     User.create(email: params[:email], username: params[:username], password: params[:password])
     redirect "/user/homepage"
-    
   end
 
-  get "/user/homepage" do
+  get '/user/homepage' do
     @username = session[:username]
     p @username
     erb :userhomepage
+
+  get '/listings/new' do
+    erb :new_listing
+  end
+
+  get '/listings' do
+    @listing = Listing.all
+    erb :listings
+  end 
+
+  post '/listings' do
+    Listing.create(listing_name: params[:listing_name])
+    # listing_name = params['listing_name']
+    # connection = PG.connect(dbname: 'sunrise_bnb_manager_test')
+    # connection.exec("INSERT INTO listings (listing_name) VALUES('#{listing_name}')")
+    redirect '/listings'
   end
 
   run! if app_file == $0
