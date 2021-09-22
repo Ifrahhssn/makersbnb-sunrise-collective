@@ -9,6 +9,8 @@ CREATE TABLE accounts (
         last_login TIMESTAMP 
 );
 
+CREATE TABLE listings(id SERIAL PRIMARY KEY, listing_name VARCHAR(280));
+
 >> Duplicate for sunrise_bnb_manager_test <<
 
 CREATE DATABASE sunrise_bnb_manager_test;
@@ -21,3 +23,5 @@ CREATE TABLE accounts (
 	created_on TIMESTAMP NOT NULL,
         last_login TIMESTAMP 
 );
+
+CREATE TABLE listings(id SERIAL PRIMARY KEY, listing_name VARCHAR(280));

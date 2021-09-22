@@ -28,6 +28,7 @@ class Sunrisebnb < Sinatra::Base
     @username = session[:username]
     p @username
     erb :userhomepage
+  end
 
   get '/listings/new' do
     erb :new_listing

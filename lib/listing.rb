@@ -3,9 +3,9 @@ require 'pg'
 class Listing
   def self.all
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'sunrisebnb_test')
+      connection = PG.connect(dbname: 'sunrise_bnb_manager_test')
     else    
-      connection = PG.connect(dbname: 'sunrisebnb')
+      connection = PG.connect(dbname: 'sunrise_bnb_manager')
     end
 
     result = connection.exec("SELECT * FROM listings;")
@@ -14,9 +14,9 @@ class Listing
   
   def self.create(listing_name:)
     if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'sunrisebnb_test')
+      connection = PG.connect(dbname: 'sunrise_bnb_manager_test')
     else    
-      connection = PG.connect(dbname: 'sunrisebnb')
+      connection = PG.connect(dbname: 'sunrise_bnb_manager')
     end
     connection.exec("INSERT INTO listings (listing_name) VALUES('#{listing_name}')")
   end

@@ -3,7 +3,7 @@ require 'listing'
 describe Listing do
   describe '.all' do
     it "should show all listings" do 
-      connection = PG.connect(dbname: 'sunrisebnb_test')
+      connection = PG.connect(dbname: 'sunrise_bnb_manager_test')
       connection.exec("INSERT INTO listings (listing_name) VALUES ('Listing number 1');")
       connection.exec("INSERT INTO listings (listing_name) VALUES ('Listing number 2');")
 
