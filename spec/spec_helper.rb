@@ -15,6 +15,8 @@ require "capybara/rspec"
 require "rspec"
 require "simplecov"
 require "simplecov-console"
+require "sinatra/flash"
+
 
 Capybara.app = Sunrisebnb
 

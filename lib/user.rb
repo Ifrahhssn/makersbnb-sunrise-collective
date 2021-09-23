@@ -32,7 +32,7 @@ class User
     result.map { |input| input["email"] }
   end
 
-  def self.authenticate(email, password)
+  def self.authenticate(email:, password:)
     if ENV["ENVIRONMENT"] == "test"
       connection = PG.connect(dbname: "sunrise_bnb_manager_test")
     else
