@@ -1,8 +1,15 @@
-Welcome to Sunrise B'n'B !
-
-New user?
-
-Sign up below
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.css"/>
+    <title> Sunrisebnb</title>
+</head>
+<body>
+    <div class="form-container" id="form">
+      <div class="form-header">
+        <img src="https://images.vexels.com/media/users/3/142840/isolated/preview/e2c144d99bfbe0a7dd00ccf3dcf4ca0d-sunrise-logo.png">
+        <h2> New user? Sign up below</h2>
 
 <form action="/users"  method="post">
   <p>
@@ -22,6 +29,30 @@ Sign up below
 
   <p>
     <input type="submit" value="Submit" />
-  </p>
+  </p> -->
 
 </form>
+
+       <form action="/users"  method="post">
+  <p>
+    <label for="username">Username:</label>
+    <input type="text" name= "username" class="form-control"/>
+  </p>
+
+  <p>
+    <label for="email">Email:</label>
+    <input type="email" placeholder="example@example.com" name="email" class="form-control"/>
+  </p>
+
+  <p>
+    <label for="email">Password:</label>
+    <input type="password" name="password" class="form-control"/>
+  </p>
+
+  </div>
+      <button id="submit">Submit</button>
+    </div>
+
+</form>
+</body>
+<html>
