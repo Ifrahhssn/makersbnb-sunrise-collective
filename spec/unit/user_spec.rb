@@ -15,5 +15,14 @@ describe User do
     end
   end
 
+  describe ".authenticate" do
+    it "should authenticate user" do
+      first_user = User.create(username: "Mark", password: "1234567", email: "test2@example.com")
 
+      authenticated_user = User.authenticate("test2@example.com", "1234567")
+
+      p authenticated_user
+      expect(authenticated_user.user_id).to eq first_user.user_id
+    end
+  end
 end

@@ -47,5 +47,21 @@ class Sunrisebnb < Sinatra::Base
     redirect '/listings'
   end
 
+  get '/sessions/new' do
+    erb :new_sessions
+  end
+
+  post '/sessions' do
+    # email = params[:email]
+    # password = params
+    User.authenticate(email: params[:email], password: params[:password])
+    session[:user_id] = user.user_id
+    redirect 'user_login/homepage'
+  end
+
+  get '/user_login/homepage' do
+   
+  end
+
   run! if app_file == $0
 end
