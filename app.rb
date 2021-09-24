@@ -69,6 +69,12 @@ class Sunrisebnb < Sinatra::Base
     redirect "/"
   end
 
+  get "/sessions/destroy" do
+    session.clear
+    flash[:notice] = "You have signed out"
+    redirect "/"
+  end
+
   # get "/user_login/homepage" do
   # end
 

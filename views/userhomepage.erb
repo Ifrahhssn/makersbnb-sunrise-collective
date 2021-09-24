@@ -13,19 +13,18 @@
    <a class="nav-link" href="/">
       <div class="nav-box">Home</div>  
     </a> 
+    <a class="nav-link" href="/listings/new">
+      <div class="nav-box">New listing</div>  
+    </a> 
     <a class="nav-link" href="/listings">
       <div class="nav-box">Listings</div>  
     </a> 
-    <a class="nav-link" href="/users/new">
+    <a class="nav-link" href="/sessions/destroy" method="post">
       <div class="nav-box">Sign out</div>  
     </a>   
   </nav>
 
 <h1> Hello <%=@username %>, Welcome to sunrise bnb </h1>
 
-<form action='/sessions/destroy' method="post">
-<input type='submit' value='Sign out'>
-</form>
-
 </body>
-</htm>
+</html>
