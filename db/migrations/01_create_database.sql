@@ -9,7 +9,13 @@ CREATE TABLE accounts (
         last_login TIMESTAMP 
 );
 
-CREATE TABLE listings(id SERIAL PRIMARY KEY, listing_name VARCHAR(280));
+CREATE TABLE listings(
+	id SERIAL PRIMARY KEY, 
+	listing_name VARCHAR(280), 
+	description VARCHAR(280), 
+	price INT
+	);
+
 
 >> Duplicate for sunrise_bnb_manager_test <<
 
@@ -24,4 +30,9 @@ CREATE TABLE accounts (
         last_login TIMESTAMP 
 );
 
-CREATE TABLE listings(id SERIAL PRIMARY KEY, listing_name VARCHAR(280));
+CREATE TABLE listings(
+	id SERIAL PRIMARY KEY, 
+	listing_name VARCHAR(280), 
+	description VARCHAR(280), 
+	price INT
+	);
