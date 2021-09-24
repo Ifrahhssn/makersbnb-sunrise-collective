@@ -45,11 +45,8 @@ class Sunrisebnb < Sinatra::Base
     erb :listings
   end
 
-  post "/listings" do
-    Listing.create(listing_name: params[:listing_name])
-    # listing_name = params['listing_name']
-    # connection = PG.connect(dbname: 'sunrise_bnb_manager_test')
-    # connection.exec("INSERT INTO listings (listing_name) VALUES('#{listing_name}')")
+  post '/listings' do
+    Listing.create(listing_name: params[:listing_name], description: params[:description], price: params[:price])
     redirect "/listings"
   end
 
