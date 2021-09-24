@@ -32,6 +32,16 @@ class User
     result.map { |input| input["email"] }
   end
 
+  def self.authenticate(email:, password:)
+    if ENV["ENVIRONMENT"] == "test"
+      connection = PG.connect(dbname: "sunrise_bnb_manager_test")
+    else
+      connection = PG.connect(dbname: "sunrise_bnb_manager")
+    end
+    result = connection.exec("SELECT * FROM accounts WHERE email = '#{email}' ")
 
-
+    User.new(user_id: result[0]["user_id"], username: result[0]["username"],
+             email: result[0]["email"], password: result[0]["password"],
+             created_on: result[0]["created_on"], last_login: result[0]["last_login"])
+  end
 end
