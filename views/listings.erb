@@ -1,4 +1,3 @@
-Listings
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,14 +10,23 @@ Listings
   <img class = "logo-image" src="https://images.vexels.com/media/users/3/142840/isolated/preview/e2c144d99bfbe0a7dd00ccf3dcf4ca0d-sunrise-logo.png">
 </a>
     <header class="nav-header">Sunrise BnB</header>
+    <a class="nav-link" href="/">
+      <div class="nav-box">Home</div>  
+    </a>
+    <a class="nav-link" href="/listings/new">
+      <div class="nav-box">New listing</div>  
+    </a> 
   <a class="nav-link" href="/">
       <div class="nav-box">Sign out</div>  
     </a>   
   </nav>
+  <div class="form-container" id="form">
+      <div class="form-header">
+        <img src="https://images.vexels.com/media/users/3/142840/isolated/preview/e2c144d99bfbe0a7dd00ccf3dcf4ca0d-sunrise-logo.png">
+        <h2> Listings</h2>
   <div>
-  <ul>
   <% @listing.each do |listing| %>
-    <li><%= listing %></li>
+    <section class="listing"><%= listing %></section>
   <% end %>
 </ul>
 </div>

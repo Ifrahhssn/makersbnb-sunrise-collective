@@ -118,3 +118,8 @@ h2 {
   outline: none;
   background-color: rgba(136, 20, 20);
 }
+
+.listing {
+  width: auto;
+  padding: 3vw;
+}

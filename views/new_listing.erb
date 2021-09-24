@@ -20,11 +20,25 @@
 <div class="form-container" id="form">
 <div class="form-header" >
         <img src="https://images.vexels.com/media/users/3/142840/isolated/preview/e2c144d99bfbe0a7dd00ccf3dcf4ca0d-sunrise-logo.png">
-        <h2> Add the name of your new listing below</h2>
+        <h2> Add a new listing below</h2>
 <form action='/listings' method= 'post'>
-<input type='text' name='listing_name' class="form-control">
-<div><br></div>
-<input type='submit' value='Submit' class="form-control">
+<p>
+    <label for="name">Listing name</label>
+    <input type="text" name= "username" class="form-control"/>
+  </p>
+
+  <p>
+    <label for="description">Description</label>
+    <input type="tect" name="description" class="form-control"/>
+  </p>
+
+  <p>
+    <label for="price">Price per night</label>
+    <input type="number" name="price" class="form-control"/>
+  </p>
+  <p>
+<input type='submit' value='Submit' class="button">
+</p>
 </form>
 </div>
 </body>
