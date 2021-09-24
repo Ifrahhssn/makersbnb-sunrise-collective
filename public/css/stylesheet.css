@@ -5,6 +5,8 @@
 }
 
 body {
+  background-color: #f06f69;
+  background-image: linear-gradient(90deg, #ffb459 0%, #fc7a4e 100%);
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
@@ -21,6 +23,46 @@ img {
   margin-right: auto;
   padding-top: 0px;
   width: 40%;
+}
+
+nav {
+  background-color: white;
+  list-style-type: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 185px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-header {
+  font-family: "Pacifico";
+  font-size: 1.5em;
+  color: #c44545;
+  margin-bottom: 2.5em;
+  padding-left: 0.5em;
+  padding-top: 0.1em;
+}
+
+.nav-link {
+  width: 100%;
+  color: black;
+}
+
+.nav-box {
+  padding-left: 0.7em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.nav-box:hover {
+  background: #c44545;
+  color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 .form-container {
@@ -56,8 +98,7 @@ h2 {
   box-shadow: 0 0 0 0.15rem;
 }
 
-
-button {
+.button {
   background-color: rgba(196, 69, 69);
   color: white;
   border: none;
@@ -69,11 +110,11 @@ button {
   padding: 20px;
 }
 
-button:hover {
+.button:hover {
   background-color: rgba(187, 26, 26);
 }
 
-button:focus {
+.button:focus {
   outline: none;
   background-color: rgba(136, 20, 20);
 }

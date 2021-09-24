@@ -1,38 +1,26 @@
-<html>
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/css/stylesheet.css"/>
     <title> Sunrisebnb</title>
 </head>
-<body>
+  <body>
+    <nav id="navbar">
+  <img class = "logo-image" src="https://images.vexels.com/media/users/3/142840/isolated/preview/e2c144d99bfbe0a7dd00ccf3dcf4ca0d-sunrise-logo.png">
+</a>
+    <header class="nav-header">Sunrise BnB</header>
+    <a class="nav-link" href="/">
+      <div class="nav-box">Home</div>  
+    </a> 
+  <a class="nav-link" href="#Login">
+      <div class="nav-box">Login</div>  
+    </a>   
+  </nav>
     <div class="form-container" id="form">
       <div class="form-header">
         <img src="https://images.vexels.com/media/users/3/142840/isolated/preview/e2c144d99bfbe0a7dd00ccf3dcf4ca0d-sunrise-logo.png">
-        <h2> New user? Sign up below</h2>
-
-<form action="/users"  method="post">
-  <p>
-    <label for="username">Enter your username</label>
-    <input type="text" name= "username"/>
-  </p>
-
-  <p>
-    <label for="email">Enter your email address</label>
-    <input type="email" name="email" />
-  </p>
-
-  <p>
-    <label for="email">Enter your password, try and make it unique!</label>
-    <input type="password" name="password" />
-  </p>
-
-  <p>
-    <input type="submit" value="Submit" />
-  </p> -->
-
-</form>
-
+        <h2> Sign up below</h2>
        <form action="/users"  method="post">
   <p>
     <label for="username">Username:</label>
@@ -49,10 +37,10 @@
     <input type="password" name="password" class="form-control"/>
   </p>
 
-  </div>
-      <button id="submit">Submit</button>
-    </div>
+  <p>
+    <input type="submit" value="Submit" class="button"/>
+  </p>
 
 </form>
-</body>
-<html>
+  </body>
+</html>
